@@ -7,6 +7,7 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Testimonials from "./Components/Testimonials";
 import Portfolio from "./Components/Portfolio";
+import Particles from "react-particles-js";
 
 import "./App.css";
 
@@ -23,6 +24,19 @@ const App = () => {
 
   return (
     <div className="App">
+      <Particles
+        params={{
+          particles: {
+            number: {
+              value: 30,
+              density: {
+                enable: true,
+                value_area:900
+              }
+            }
+          }
+        }}
+      />
       <Header data={resumeData.main} />
       <About data={resumeData.main} />
       <Resume data={resumeData.resume} />
